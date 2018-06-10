@@ -22,5 +22,6 @@ defmodule Telefonos.Router do
      get "/users/:id", UserController, :show
      post "/users", UserController, :create
      put "/users/:id", UserController, :update
+     get "/users/delete/:id", UserController, :borrar
    end
 end

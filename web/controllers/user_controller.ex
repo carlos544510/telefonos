@@ -32,6 +32,12 @@ defmodule Telefonos.UserController do
     json conn_with_status(conn, user), user
   end
 
+  def borrar(conn, %{"id" => id}) do
+    user = Repo.get(Telefonos.User, String.to_integer(id))
+    Telefonos.Repo.delete(user)
+    json conn_with_status(conn, user), user
+  end
+
   def create(conn, params) do
       changeset = Telefonos.User.changeset(
         %Telefonos.User{}, params)
