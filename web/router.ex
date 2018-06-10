@@ -20,5 +20,7 @@ defmodule Telefonos.Router do
      pipe_through :api
      get "/users", UserController, :index
      get "/users/:id", UserController, :show
+     post "/users", UserController, :create
+     put "/users/:id", UserController, :update
    end
 end
