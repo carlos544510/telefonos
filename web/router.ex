@@ -21,8 +21,8 @@ defmodule Telefonos.Router do
      get "/users", UserController, :index
      get "/users/:id", UserController, :show
      post "/users", UserController, :create
-     # options "/update/users/:id", UserController, :update
-     put "/update/users/:id", UserController, :actualizar
+     post "/update/users/:id", UserController, :update
+     #post "/update/users/:id", UserController, :actualizar
      post "/create/users", UserController, :crear
      options "/borrar/users/:id", UserController, :borrar
    end
